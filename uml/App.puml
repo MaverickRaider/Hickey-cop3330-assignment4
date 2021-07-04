@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class App {
+    + main()
+    + start()
+}
+
+class AppController {
+    - displayListTitle : TextField
+    - displayItemTitle : TextField
+    - displayItemDescription : TextField
+    - displayDueDate : TextField
+
+    + viewListClicked()
+    + editListClicked()
+    + deleteListClicked()
+    + newListClicked()
+    + checkListMarked()
+    + saveListClicked()
+    + newTaskClicked()
+    + editTaskClicked()
+    + saveTaskClicked()
+    + deleteTaskClicked()
+    + checkTaskMarked()
+    + completed()
+}
+
+javafx.Application <|-- App
+App - AppController
+
+@enduml
